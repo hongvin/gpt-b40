@@ -9,8 +9,7 @@ SYSTEM_PROMPT_FORM = "You are looking at an income verification form. Return all
 
 USER_PROMPT_OKU = "Is the image a OKU Card or medical report letter? What is the person name and NRIC or IC number? If it is a OKU card, what is the category of disabilities, and what is the registration number? If it is a medical confirmation letter, what is the name of medical centre, date of the letter, summary of the medical letter, and the date the letter is produced. Return all the info in point form."
 USER_PROMPT_PARENT = "Is the image a payslip, confirmation letter, deceased letter, or disabled (OKU) card? If it is a payslip, what is the employee name, company name, and the gross pay? If it is a confirmation letter, who signed the letter, what is the letter about, and can you extract the {} name and the declared income? If it is a deceased letter, what is the deceased name, and date of death? If it is a OKU card, what is the cardholder name, type of OKU, and serial number?"
-USER_PROMPT_FORM = "What is the name and matric number of the student? In Section B, is the detail for father or guardian, then what is the name, IC number, status, telephone number, occupation, employer, nett income, and no. of dependent? In Section C, is the detail for mother or guardian or empty, then what is the name, IC number, status, telephone number, occupation, employer, nett income, and no. of dependent? Who signed the form, and the title of the officer who signed the form?"
-
+USER_PROMPT_FORM = "Extract the student's name and matric number. In Section B and C, extract the name, IC or Passport number, status, mobile phone number, occupation, employer, nett income, and number of dependent of the father or guardian information. Include the name, officer title, and date of verification."
 MODEL = "gpt-4o"
 client = OpenAI(api_key=st.secrets['OPENAI_API'])
 
